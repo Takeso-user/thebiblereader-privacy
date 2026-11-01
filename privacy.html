@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy & Legal — TheBibleReader</title>
+  <link rel="icon" type="image/png" href="assets/icon.png" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="ambient-bg" aria-hidden="true">
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/icon.png" alt="TheBibleReader Icon" class="brand-icon" />
+        <span class="brand-title">← TheBibleReader</span>
+      </a>
+
+      <div class="nav-controls">
+        <div class="lang-switcher" role="group" aria-label="Language switcher">
+          <button type="button" class="lang-btn" data-lang="ru">RU</button>
+          <button type="button" class="lang-btn active" data-lang="en">EN</button>
+          <button type="button" class="lang-btn" data-lang="pl">PL</button>
+          <button type="button" class="lang-btn" data-lang="uk">UK</button>
+        </div>
+        <button type="button" class="theme-toggle" id="theme-toggle-btn">
+          <span>📜</span> <span>Sepia</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container legal-container">
+      <div class="section-header">
+        <span class="section-badge" id="legal-badge">LEGAL & PRIVACY CENTER</span>
+        <h1 class="section-title" id="legal-title">Privacy Policy & Legal Notices</h1>
+        <p class="section-subtitle" id="legal-subtitle">
+          Official regulatory and store compliance documentation for TheBibleReader (Package ID: pl.sergiuszmalcew).
+        </p>
+      </div>
+
+      <div class="legal-tabs" role="tablist">
+        <button type="button" class="legal-tab-btn active" data-legal-tab="privacy">Privacy Policy</button>
+        <button type="button" class="legal-tab-btn" data-legal-tab="disclaimer">Legal Disclaimer</button>
+        <button type="button" class="legal-tab-btn" data-legal-tab="deletion">Account & Data Deletion</button>
+      </div>
+
+      <div class="legal-box" id="legal-content-box"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p id="footer-copyright">© 2026 TheBibleReader • Developed by Sergiusz Malcew (<a href="mailto:sergiusz.malec@thescripturereader.app">sergiusz.malec@thescripturereader.app</a>). Released under the MIT License.</p>
+        <p id="footer-non-affiliation">Unofficial study application. Not affiliated with the Watch Tower Bible and Tract Society of Pennsylvania.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/translations.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TheBibleReader — Ежедневное чтение и аудио Священного Писания</title>
+  <meta name="description" content="Бесплатное приложение без рекламы для ежедневного чтения и прослушивания Библии по плану. Доступно на Android и скоро на iOS." />
+  <meta property="og:title" content="TheBibleReader — Holy Scriptures Daily Reader & Audio" />
+  <meta property="og:description" content="Read and listen to the Holy Scriptures every day. 100% Free, Ad-Free, Offline-Ready." />
+  <meta property="og:image" content="assets/feature-graphic.jpg" />
+  <link rel="icon" type="image/png" href="assets/icon.png" />
+  <link rel="apple-touch-icon" href="assets/icon.png" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Ambient Background Glow -->
+  <div class="ambient-bg" aria-hidden="true">
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
+  </div>
+
+  <!-- Sticky Navigation Bar -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="#" class="brand">
+        <img src="assets/icon.png" alt="TheBibleReader Icon" class="brand-icon" />
+        <span class="brand-title">TheBibleReader</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#features" id="nav-features">Возможности</a></li>
+        <li><a href="#screenshots" id="nav-screenshots">Экраны</a></li>
+        <li><a href="#safety" id="nav-safety">Безопасность данных</a></li>
+        <li><a href="#legal" id="nav-legal">Правовая информация</a></li>
+      </ul>
+
+      <div class="nav-controls">
+        <div class="lang-switcher" role="group" aria-label="Language switcher">
+          <button type="button" class="lang-btn active" data-lang="ru">RU</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+          <button type="button" class="lang-btn" data-lang="pl">PL</button>
+          <button type="button" class="lang-btn" data-lang="uk">UK</button>
+        </div>
+
+        <button type="button" class="theme-toggle" id="theme-toggle-btn" title="Switch Theme">
+          <span>📜</span> <span>Сепия</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content reveal visible">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span id="hero-badge-text">Версия 1.0.4 • 100% Бесплатно • Без рекламы</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span id="hero-title-start">Читайте и слушайте</span>
+            <span class="hero-title-highlight" id="hero-title-highlight">Священное Писание</span>
+            <span id="hero-title-end">каждый день</span>
+          </h1>
+
+          <p class="hero-subtitle" id="hero-subtitle">
+            Минималистичное и продуманное приложение для личного изучения Библии по плану. Встроенная читалка EPUB со сносками, фоновый аудиоплеер, гибкий календарь и облачная синхронизация.
+          </p>
+
+          <div class="store-buttons">
+            <!-- Google Play Button -->
+            <a
+              href="https://play.google.com/store/apps/details?id=pl.sergiuszmalcew"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="store-btn store-btn-primary"
+            >
+              <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/>
+              </svg>
+              <div class="store-text">
+                <span class="store-sub" id="gp-sub-1">ДОСТУПНО В</span>
+                <span class="store-main" id="gp-main-1">Google Play</span>
+              </div>
+            </a>
+
+            <!-- Apple App Store Button (Coming Soon) -->
+            <a
+              href="#download"
+              class="store-btn store-btn-secondary"
+              aria-label="App Store Coming Soon"
+            >
+              <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.33c.64-.78 1.08-1.86.96-2.94-.93.04-2.06.62-2.72 1.4-.58.68-1.1 1.79-.96 2.84 1.04.08 2.08-.52 2.72-1.3z"/>
+              </svg>
+              <div class="store-text">
+                <span class="store-sub" id="as-sub-1">СКОРО В</span>
+                <span class="store-main">
+                  <span id="as-main-1">App Store</span>
+                  <span class="coming-soon-Tag" id="as-badge-1">В разработке</span>
+                </span>
+              </div>
+            </a>
+          </div>
+
+          <div class="hero-pills">
+            <span class="hero-pill" id="pill-audio">🎧 Фоновое аудио</span>
+            <span class="hero-pill" id="pill-schedule">📅 Гибкий график</span>
+            <span class="hero-pill" id="pill-sync">☁️ Облачный бекап</span>
+            <span class="hero-pill" id="pill-privacy">🛡️ Без рекламы и трекеров</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal visible">
+          <div class="phone-stage">
+            <div class="phone-glow"></div>
+            <img src="assets/icon.png" alt="Holy Scriptures Icon" class="floating-app-icon" />
+            <div class="phone-frame">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+                <img src="assets/screenshots/1.png" alt="TheBibleReader App Screen" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Statistics Ribbon -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid reveal">
+          <div class="stat-card">
+            <div class="stat-value" id="stat-books-val">66</div>
+            <div class="stat-label" id="stat-books-lbl">Книг Писания</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="stat-chapters-val">1 189</div>
+            <div class="stat-label" id="stat-chapters-lbl">Глав с текстом и аудио</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="stat-langs-val">4</div>
+            <div class="stat-label" id="stat-langs-lbl">Языка (RU, EN, PL, UK)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="stat-ads-val">0%</div>
+            <div class="stat-label" id="stat-ads-lbl">Рекламы и платных подписок</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Grid Section -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge" id="features-badge">ВОЗМОЖНОСТИ ПРИЛОЖЕНИЯ</span>
+          <h2 class="section-title" id="features-title">Всё необходимое для вдумчивого ежедневного чтения</h2>
+          <p class="section-subtitle" id="features-subtitle">
+            Никаких отвлекающих элементов — только чистый текст, живое аудио и удобное отслеживание личного прогресса.
+          </p>
+        </div>
+
+        <div class="features-grid reveal" id="features-grid">
+          <!-- Populated dynamically by js/app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Screenshot Showcase Section -->
+    <section class="section showcase-section" id="screenshots">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge" id="showcase-badge">ИНТЕРФЕЙС ПРИЛОЖЕНИЯ</span>
+          <h2 class="section-title" id="showcase-title">Посмотрите, как устроен TheBibleReader</h2>
+          <p class="section-subtitle" id="showcase-subtitle">
+            Переключайтесь между экранами ниже, чтобы детально рассмотреть каждую вкладку мобильного приложения.
+          </p>
+        </div>
+
+        <div class="showcase-tabs reveal" id="showcase-tabs">
+          <!-- Populated by js/app.js -->
+        </div>
+
+        <div class="showcase-body reveal">
+          <div class="showcase-phone-wrap">
+            <div class="showcase-phone">
+              <div class="phone-screen">
+                <img id="showcase-screen-img" src="assets/screenshots/4.png" alt="App Screenshot" />
+              </div>
+            </div>
+          </div>
+
+          <div class="showcase-info">
+            <span class="showcase-tag" id="showcase-panel-tag">ВКЛАДКА «СЕГОДНЯ»</span>
+            <h3 class="showcase-panel-title" id="showcase-panel-title">Ежедневный план и интерактивный календарь</h3>
+            <p class="showcase-panel-desc" id="showcase-panel-desc"></p>
+            <ul class="showcase-bullets" id="showcase-bullets"></ul>
+            <div class="showcase-thumbs" id="showcase-thumbs"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Google Play Data Safety Section -->
+    <section class="section" id="safety">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge" id="safety-badge">GOOGLE PLAY DATA SAFETY</span>
+          <h2 class="section-title" id="safety-title">Безопасность данных и приватность</h2>
+          <p class="section-subtitle" id="safety-subtitle">
+            Мы придерживаемся строгих стандартов конфиденциальности Google Play и Apple App Store. Ваши данные принадлежат только вам.
+          </p>
+        </div>
+
+        <div class="safety-grid reveal" id="safety-grid">
+          <!-- Populated by js/app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Legal & Privacy Center -->
+    <section class="section legal-section" id="legal">
+      <div class="container legal-container">
+        <div class="section-header reveal">
+          <span class="section-badge" id="legal-badge">ЮРИДИЧЕСКИЙ ЦЕНТР</span>
+          <h2 class="section-title" id="legal-title">Правовая информация и политики</h2>
+          <p class="section-subtitle" id="legal-subtitle">
+            Официальная документация приложения TheBibleReader (ID пакета: pl.sergiuszmalcew), опубликованная для пользователей и магазинов приложений.
+          </p>
+        </div>
+
+        <div class="legal-tabs reveal" role="tablist">
+          <button type="button" class="legal-tab-btn active" data-legal-tab="privacy">
+            Политика конфиденциальности
+          </button>
+          <button type="button" class="legal-tab-btn" data-legal-tab="disclaimer">
+            Отказ от ответственности (Disclaimer)
+          </button>
+          <button type="button" class="legal-tab-btn" data-legal-tab="deletion">
+            Удаление аккаунта и данных
+          </button>
+        </div>
+
+        <div class="legal-box reveal" id="legal-content-box">
+          <!-- Populated by js/app.js -->
+        </div>
+
+        <!-- Bottom Download CTA Banner -->
+        <div class="cta-banner reveal" id="download">
+          <h2 id="cta-title">Начните ежедневное чтение уже сегодня</h2>
+          <p id="cta-subtitle">
+            Скачайте TheBibleReader в Google Play или следите за выходом версии для iOS и iPadOS в App Store.
+          </p>
+
+          <div class="store-buttons">
+            <a
+              href="https://play.google.com/store/apps/details?id=pl.sergiuszmalcew"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="store-btn store-btn-primary"
+            >
+              <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/>
+              </svg>
+              <div class="store-text">
+                <span class="store-sub" id="gp-sub-2">ДОСТУПНО В</span>
+                <span class="store-main" id="gp-main-2">Google Play</span>
+              </div>
+            </a>
+
+            <a href="#download" class="store-btn store-btn-secondary">
+              <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.33c.64-.78 1.08-1.86.96-2.94-.93.04-2.06.62-2.72 1.4-.58.68-1.1 1.79-.96 2.84 1.04.08 2.08-.52 2.72-1.3z"/>
+              </svg>
+              <div class="store-text">
+                <span class="store-sub" id="as-sub-2">СКОРО В</span>
+                <span class="store-main">
+                  <span id="as-main-2">App Store</span>
+                  <span class="coming-soon-Tag" id="as-badge-2">В разработке</span>
+                </span>
+              </div>
+            </a>
+          </div>
+
+          <a href="privacy.html" class="standalone-link" id="cta-standalone-privacy">
+            Открыть отдельную страницу Privacy Policy
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="#" class="brand">
+            <img src="assets/icon.png" alt="TheBibleReader" class="brand-icon" />
+            <span class="brand-title">TheBibleReader</span>
+          </a>
+          <p class="footer-desc" id="footer-desc">
+            Независимое бесплатное приложение для ежедневного чтения и прослушивания Священного Писания.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4 id="footer-links-title">Навигация</h4>
+          <ul>
+            <li><a href="#features" id="footer-nav-features">Возможности</a></li>
+            <li><a href="#screenshots" id="footer-nav-screenshots">Экраны</a></li>
+            <li><a href="#safety" id="footer-nav-safety">Безопасность данных</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 id="footer-legal-title">Документы</h4>
+          <ul>
+            <li><a href="#privacy" data-open-legal="privacy" id="footer-link-privacy">Политика конфиденциальности</a></li>
+            <li><a href="#disclaimer" data-open-legal="disclaimer" id="footer-link-disclaimer">Отказ от ответственности</a></li>
+            <li><a href="#delete-account" data-open-legal="deletion" id="footer-link-deletion">Удаление аккаунта</a></li>
+            <li><a href="privacy.html" id="footer-link-standalone">Privacy Policy (Отдельная страница)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 id="footer-contact-title">Контакты и поддержка</h4>
+          <ul>
+            <li><a href="https://play.google.com/store/apps/details?id=pl.sergiuszmalcew" target="_blank" rel="noopener noreferrer" id="footer-contact-play">Google Play Store</a></li>
+            <li><a href="https://github.com/Takeso-user/thebiblereader-privacy/issues" target="_blank" rel="noopener noreferrer" id="footer-contact-issues">GitHub Issues (Поддержка)</a></li>
+            <li><a href="mailto:sergiusz.malec@thescripturereader.app?subject=Account%20Deletion%20Request" id="footer-contact-delete">Запрос на удаление данных</a></li>
+            <li><a href="mailto:sergiusz.malec@thescripturereader.app" id="footer-contact-email">sergiusz.malec@thescripturereader.app</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p id="footer-copyright">© 2026 TheBibleReader • Разработчик: Sergiusz Malcew. Распространяется по лицензии MIT.</p>
+        <p id="footer-non-affiliation">Неофициальное приложение для личного изучения. Не связано с Watch Tower Bible and Tract Society of Pennsylvania.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/translations.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
+
